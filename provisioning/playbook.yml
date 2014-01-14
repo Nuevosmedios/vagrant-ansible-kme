@@ -1,0 +1,11 @@
+---
+# This playbook knows how to install postgres and its related extensions on Ubuntu
+
+- hosts: database
+  sudo: yes
+  roles:
+    - { role: heroku }
+    - { role: packages_ubuntu }
+    - { role: postgres}
+    #Uncomment if you want to install pgtap too:
+    #- { role: pgtap}
